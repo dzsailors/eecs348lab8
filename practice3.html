@@ -1,0 +1,28 @@
+<html>
+    <style>
+            body {background-color: #1f1f1f; color: white;}
+    </style>
+    <body>
+        <h1>Enter your password below</h1>
+        <label for = "password1">Password:</label>
+        <input type = "text" id = "password1"><br>
+        <label for = "password2">Re-enter password:</label>
+        <input type = "text" id = "password2"><br>
+        <button onclick = "verifyPassword()">Verify Passwords</button>
+        <script type="text/javascript">
+        function verifyPassword() {
+            var password1 = document.getElementById("password1").value;
+            var password2 = document.getElementById("password2").value;
+            if (password1.length < 8) {
+                alert("First password must be at least 8 characters long");
+            } else if (password2.length < 8) {
+                alert("Second password must be at least 8 characters long");  
+            } else if (password1 !== password2) {
+                alert("Passwords do not match");
+            } else {
+                alert("Passwords match!");
+            }
+        }
+        </script>
+    </body>
+</html>
